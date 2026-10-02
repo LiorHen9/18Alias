@@ -5,7 +5,7 @@ import pathlib, re, sys
 root = pathlib.Path(__file__).resolve().parent.parent
 guide = (root / "WORDS_GUIDE.md").read_text(encoding="utf-8")
 section = guide.split("## 9. היסטוריית משוב")[1]
-paras = [p for p in section.split("\n\n") if p.count(",") > 20]
+paras = [p for p in section.split("\n\n") if p.count(",") > 20 and not p.lstrip().startswith("אושרו")]
 banned = {w.strip() for p in paras for w in p.split(",") if w.strip()}
 norm = lambda w: re.sub(r"[֑-ׇ'\"׳״]", "", w).strip()
 banned_n = {norm(w) for w in banned}
