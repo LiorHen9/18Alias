@@ -328,7 +328,7 @@ function vSettings(){
         <div class="stepper"><button data-a="target" data-v="5" aria-label="הגדלה">+</button><output>${s.target}</output><button data-a="target" data-v="-5" aria-label="הקטנה">−</button></div></div>
       ${hasAdultPair() ? `<div class="group"><span class="label">רמת חריפות</span>
         ${seg("difficulty", [["easy","🌶️ קליל"],["medium","🌶️🌶️ פיקנטי"],["hard","🌶️🌶️🌶️ נועז"],["mixed","מעורב"]], s.difficulty)}
-        <p class="hint">${{easy:"פלירט, דייטים ורומנטיקה",medium:"כפל משמעות וקריצות",hard:"בלי מעצורים, עם חיוך",mixed:"שילוב אקראי של כל הרמות"}[s.difficulty]}</p></div>` : ""}
+        <p class="hint">${{easy:"קריצות עדינות ופלירט",medium:"כפל משמעות וקריצות",hard:"בלי מעצורים, עם חיוך",mixed:"שילוב אקראי של כל הרמות"}[s.difficulty]}</p></div>` : ""}
       <div class="group">
         ${sw("skipPenalty", "דילוג מוריד נקודה")}
         ${sw("lastWord", "המילה האחרונה", "כשהזמן נגמר, כל מי שבחדר יכול לנחש")}
