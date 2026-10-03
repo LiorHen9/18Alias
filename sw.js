@@ -1,5 +1,5 @@
 // Bump VERSION whenever you upload a new index.html so players get the update.
-const VERSION = "alias18-v3";
+const VERSION = "alias18-v4";
 const CORE = ["./", "./index.html", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./icons/favicon.png",
   "./words/easy.txt", "./words/medium.txt", "./words/hard.txt"];
