@@ -13,6 +13,8 @@
 | `icons/` | האייקונים |
 | `WORDS_GUIDE.md` | הכללים לבחירת מילים |
 | `tools/check_words.py` | בדיקה אוטומטית של הרשימות |
+| `tools/review.html` | טופס אישור הביטויים (בודק המילים). עותק המקור של הדף ב־Claude; עובד רק מתוך Claude |
+| `tools/apply_review.py` | מחיל את ההחלטות מהבודק על הרשימות ועל `WORDS_GUIDE.md` |
 
 ## עריכת המילים
 
