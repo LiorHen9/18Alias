@@ -1,0 +1,32 @@
+{
+  "hosting": {
+    "site": "alias18-liorhen9",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      ".git/**",
+      ".github/**",
+      ".firebase/**",
+      "**/node_modules/**",
+      "README.md",
+      "WORDS_GUIDE.md",
+      "tools/**",
+      "legacy-pages/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(html|js|webmanifest|txt)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "/",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "**",
+        "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      }
+    ]
+  }
+}

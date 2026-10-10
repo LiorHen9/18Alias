@@ -1,5 +1,5 @@
 // Bump VERSION whenever you upload a new index.html so players get the update.
-const VERSION = "alias18-v5";
+const VERSION = "alias18-v6";
 const CORE = ["./", "./index.html", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./icons/favicon.png",
   "./words/easy.txt", "./words/medium.txt", "./words/hard.txt"];
@@ -26,8 +26,8 @@ self.addEventListener("fetch", e => {
     return;
   }
   if (url.origin !== location.origin) return;
-  // Word lists and the shared room module (from the Alias site): network first, cache when offline
-  if (url.pathname.includes("/words/") || url.pathname.endsWith("/room.js")) {
+  // Word lists: network first so edits show up right away, cache when offline
+  if (url.pathname.includes("/words/")) {
     const key = url.origin + url.pathname;
     e.respondWith(fetch(req).then(r => {
       if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(key, copy)); }
